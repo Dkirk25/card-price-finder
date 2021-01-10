@@ -31,7 +31,7 @@ def main():
             while 1:
                 list_of_card_details.extend((q.get(False)))
                 list_of_unknown_cards.extend((q2.get(False)))
-        except Exception as ex:
+        except Exception:
             pass
         time.sleep(0.5)    # Give tasks a chance to put more data in
         if not q.empty():
@@ -64,8 +64,7 @@ def get_card_price(list_of_cards, q, q2):
 
                 card_details = {'name':name, 'price': market_price, 'rarity': rarity, 'code': card_number}
                 temp_list.append(card_details)
-            except Exception as ex:
-                print(ex)
+            except Exception:
                 missing_card_list.append(card_number)
     q.put(temp_list)
     q2.put(missing_card_list)
