@@ -12,7 +12,7 @@ Requirements
 2. pip install -r requirements.txt
 3. Add list of card id to 'cards.txt'
 4. On mac, You might have to set 'OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' in env
-5. Test run your project locally with `python robin.py`
+5. Test run your project locally with `python main.py`
 
 # Integrations
 - TCGPlayer.com
