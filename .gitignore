@@ -3,3 +3,7 @@ cards.txt
 .vscode/
 final-card-list.txt
 bad-cards.txt
+__pycache__
+
+input/
+results/

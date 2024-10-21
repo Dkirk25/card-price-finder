@@ -135,7 +135,7 @@ def main(inputFile, outputFile):
 
 if __name__ == "__main__":
     today = datetime.now().strftime("%Y-%m-%d")
-    inputName = "cards"
-    inputFile = f"{inputName}.txt"
+    inputName = "yugioh-binder"
+    inputFile = f"input/{inputName}.txt"
     outputFile = f"{inputName}_{today}"
     main(inputFile, outputFile)

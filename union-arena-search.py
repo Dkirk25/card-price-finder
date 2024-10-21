@@ -4,6 +4,8 @@ from datetime import datetime
 
 # Rarity mapping based on input
 rarity_mapping = {
+    "SR*": "Super Rare 1-Star",
+    "R*": "Rare 2-Star",
     "R*": "Rare 1-Star",
     "SR": "Super Rare",
     "R": "Rare",
@@ -23,7 +25,7 @@ def fetch_data():
     return products, prices
 
 def search_product(products, card_number, input_rarity):
-    rarities = ["AP","R*", "SR", "R", "U", "C"]  # Search priority
+    rarities = ["AP","SR*","R**", "R*", "SR", "R", "U", "C"]  # Search priority
 
     # Map input rarity to full name
     mapped_rarity = rarity_mapping.get(input_rarity)
@@ -158,6 +160,7 @@ def main(inputFile, outputFile):
 
 if __name__ == "__main__":
     today = datetime.now().strftime("%Y-%m-%d")
-    inputFile = "union-arena-bleach.txt"
-    outputFile = f"{inputFile}_{today}.txt"
+    inputName = "bleach-box-2"
+    inputFile = f"input/{inputName}.txt"
+    outputFile = f"{inputName}-1_{today}"
     main(inputFile, outputFile)
