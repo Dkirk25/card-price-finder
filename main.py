@@ -3,9 +3,9 @@ from card_manager import CardManager
 
 if __name__ == "__main__":
     today = datetime.now().strftime("%Y-%m-%d")
-    inputName = "bleach-box-1"
+    inputName = "juju-box-1"
     group_product_number = 81
-    union_arena_title = "Bleach"
+    union_arena_title = "jjk"
     inputFile = f"input/{inputName}.txt"
     output_file = f"results/{inputName}_{today}"
     

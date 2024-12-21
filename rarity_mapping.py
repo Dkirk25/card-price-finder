@@ -1,4 +1,5 @@
 RARITY_MAPPING = {
+    "SR**": "Super Rare 2-Star",
     "SR*": "Super Rare 1-Star",
     "R**": "Rare 2-Star",
     "R*": "Rare 1-Star",
