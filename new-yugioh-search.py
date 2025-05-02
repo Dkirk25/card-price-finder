@@ -4,15 +4,15 @@ from datetime import datetime
 import concurrent.futures
 
 def fetch_group_ids():
-    group_url = "https://tcgcsv.com/2/groups"
+    group_url = "https://tcgcsv.com/tcgplayer/2/groups"
     response = requests.get(group_url).json()  # Fetch group data
     group_ids = [group['groupId'] for group in response['results']]  # Extract groupIds from the results
     return group_ids
 
 # Function to fetch data for a single group
 def fetch_group_data(group_id):
-    product_url = f"https://tcgcsv.com/2/{group_id}/products"
-    prices_url = f"https://tcgcsv.com/2/{group_id}/prices"
+    product_url = f"https://tcgcsv.com/tcgplayer/2/{group_id}/products"
+    prices_url = f"https://tcgcsv.com/tcgplayer/2/{group_id}/prices"
 
     try:
         products = requests.get(product_url).json()

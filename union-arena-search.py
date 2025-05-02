@@ -17,8 +17,8 @@ rarity_mapping = {
 
 # Step 1 & 2: Fetching data from the URLs
 def fetch_data():
-    product_url = "https://tcgcsv.com/81/23522/products"
-    prices_url = "https://tcgcsv.com/81/23522/prices"
+    product_url = "https://tcgcsv.com/tcgplayer/81/23522/products"
+    prices_url = "https://tcgcsv.com/tcgplayer/81/23522/prices"
 
     products = requests.get(product_url).json()  # Save as a list of dictionaries
     prices = requests.get(prices_url).json()     # Save as a list of dictionaries
